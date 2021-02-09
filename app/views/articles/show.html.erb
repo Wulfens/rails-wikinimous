@@ -1,9 +1,15 @@
-<div>
-    <%= link_to "Wikinimous", articles_path %>
-    <%= link_to "New article", new_article_path %>
-</div>
-
 <div class="container">
-    <h1><%= @article.title %>- <%= link_to("✏", edit_article_path(@article)) %> - <%= link_to("🚮", article_path(@article), method: :delete, data: {confirm: "are you sure?"})%> </h1>
+    <h1>
+        <%= @article.title %> - 
+        
+        <%= link_to(edit_article_path(@article)) do %>
+            <i class="fas fa-pen"></i>
+        <% end %> -
+
+        <%= link_to(article_path(@article), method: :delete, data: {confirm: "are you sure?"}) do %>
+            <i class="fas fa-trash"></i>
+        <% end %>
+
+    </h1>
     <p><%= @article.content %></p>
 </div>
