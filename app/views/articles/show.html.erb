@@ -1,10 +1,10 @@
 <div class="container">
     <h1>
-        <%= @article.title %> - 
+        <%= @article.title %>
         
         <%= link_to(edit_article_path(@article)) do %>
             <i class="fas fa-pen"></i>
-        <% end %> -
+        <% end %>
 
         <%= link_to(article_path(@article), method: :delete, data: {confirm: "are you sure?"}) do %>
             <i class="fas fa-trash"></i>
